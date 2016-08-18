@@ -26,14 +26,15 @@
 			</script>			
 		</div>
 
-		<div>
+		<div class="calculation_section">
 			Units of distance: 
 			<input type="radio" name="calc_units" id="calc_units_miles" value="mile" checked="yes"></input>Miles
 			<input type="radio" name="calc_units" id="calc_units_km" value="km"></input>Kilometers			
 		</div>
+			
+		<hr/>
 
-		<div>
-			<hr/>
+		<div class="calculation_section">
 			<h2>Distance &amp; Time to Minutes/<span class="units_label">mile</span></h2>
 			<h3>I ran so far in such an amount of time. How fast did I go?</h3>
 
@@ -60,8 +61,10 @@
 
 			Result (per <span class="units_label">mile</span>): <span type="text" id="calc_mpm_result" class="time"></span>
 		</div>
-		<div>
-			<hr/>			
+
+		<hr/>
+
+		<div class="calculation_section">
 			<h2>Minutes/<span class="units_label">mile</span> to Distance &amp; Time</h2>
 			<h3>If I ran at Minutes/<span class="units_label">mile</span> when would I finish a given distance?</h3>
 
@@ -111,7 +114,7 @@
 
 				<div class="clear"></div>
 
-				<table>
+				<table id="calc_dist">
 					<thead>
 						<tr>
 							<th>Distance</th>
@@ -123,8 +126,10 @@
 				</table>				
 			</div>
 		</div>
-		<div>
-			<hr/>			
+
+		<hr/>
+
+		<div class="calculation_section">
 			<h2><span class="units_label">mile</span>s per hour to Minutes per <span class="units_label">mile</span></h2>
 			<h3>I'd like to convert Minutes/<span class="units_label">mile</span> to <span class="units_label">mile</span>s per hour, or vice versa.</h3>
 
@@ -153,14 +158,14 @@
 						<td><input type="text" id="calc_utom_ss" value="0" class="time_segment_long"></input></td>
 					</tr>
 				</table>			
-			</div>
+			</div>			
 		</div>
 	</body>
 	<footer>
 		<div id="footer">
 			<hr/>
 			Feedback? Mail me! <a href="mailto:chris@chrisumbel.com">chris@chrisumbel.com</a>
-			<br/>
+			<br/>			
 			Copyright &copy; 2016 Christopher Michael Umbel
 		</div>
 	</footer>

@@ -10,12 +10,23 @@
     width: 100px;
 }
 
+button {
+    font-family: 'Lucida Sans', Arial;
+    font-size: 12px;
+}
+
+.calculation_section {
+    background-color: #bfbfbf;  
+    width: 460px;  
+}
+
 .inputGroup {
-    background-color: #AAAAAA;
+    background-color: #99ccff;
+    padding-left: 5px;
+    padding-right: 5px;
     margin-right: 5px;
     margin-left: 5px;
     margin-bottom: 5px;
-
     float: left;
 }
 
@@ -40,7 +51,31 @@
     width: 80px;
 }
 
+#calc_dist td {
+    border: 1px solid black;
+
+    border-color: black;
+}
+
 #footer {
     clear: 
     left;
+}
+
+h1 {
+    font-size: 38px;    
+}
+
+h2 {
+    font-size: 28px;    
+}
+
+h3 {
+    font-size: 18px;
+    font-style: italic;
+}
+
+body {
+    font-size: 18px;
+    font-family: 'Lucida Sans', Arial
 }

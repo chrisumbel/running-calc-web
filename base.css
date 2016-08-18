@@ -1,0 +1,42 @@
+.clear {
+    clear: both;
+}
+
+.custom_dist {
+    font-weight: bold;
+}
+
+.distance {
+    width: 100px;
+}
+
+.inputGroup {
+    background-color: #AAAAAA;
+    margin-right: 5px;
+    margin-left: 5px;
+    margin-bottom: 5px;
+
+    float: left;
+}
+
+.inputError {
+    border-color: red;
+    color: red;
+}
+
+.time {
+    text-align: right;
+}
+
+.time_segment {
+    width: 20px;
+}
+
+.units {
+    width: 80px;
+}
+
+#footer {
+    clear: 
+    left;
+}

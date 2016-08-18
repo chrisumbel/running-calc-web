@@ -122,11 +122,15 @@ $('#calc_dist_calc_time').click(function() {
     });
 });
 
+function formateDecimal(n) {
+    return n.toFixed(3);
+}
+
 $('#calc_utom_uph_to_mpm').click(function() {
     errorIfy(function() {
         var spu = upsToSpu(uphToUps(parseAndValidateNumberField('#calc_utom_uph')));
         $('#calc_utom_mm').val(Math.floor(spu / 60));
-        $('#calc_utom_ss').val(spu % 60);					
+        $('#calc_utom_ss').val(formateDecimal(spu % 60));
     }, function() {
         $('#calc_utom_mm').val(0);
         $('#calc_utom_ss').val(0);        

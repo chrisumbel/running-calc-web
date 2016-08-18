@@ -32,6 +32,10 @@
     width: 20px;
 }
 
+.time_segment_long {
+    width: 120px;
+}
+
 .units {
     width: 80px;
 }

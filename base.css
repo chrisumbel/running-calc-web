@@ -40,6 +40,10 @@ button {
     color: red;
 }
 
+.result {
+    color: darkgreen;
+}
+
 .time {
     text-align: right;
 }

@@ -2,10 +2,6 @@
     clear: both;
 }
 
-.custom_dist {
-    font-weight: bold;
-}
-
 .distance {
     width: 100px;
 }
@@ -26,7 +22,7 @@ button {
     width: 460px;  
 }
 
-.inputGroup {
+.input_group {
     background-color: #99ccff;
     padding: 5px;
     margin-right: 5px;
@@ -35,13 +31,17 @@ button {
     float: left;
 }
 
-.inputError {
+.input_error {
     border-color: red;
     color: red;
 }
 
 .result {
     color: darkgreen;
+}
+
+.result_label {
+    font-weight: bold;
 }
 
 .time {
@@ -71,12 +71,8 @@ button {
     left;
 }
 
-h1 {
-    font-size: 38px;    
-}
-
 h2 {
-    font-size: 28px;    
+    font-size: 24px;    
 }
 
 h3 {

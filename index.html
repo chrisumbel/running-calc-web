@@ -1,7 +1,7 @@
 <html>
 	<head>
 		<link rel="stylesheet" type="text/css" href="base.css">
-		<title>CalcuRun - Handy running time and distance conversions.</title>
+		<title>CalcuRun - Handy running time and distance conversion calculator.</title>
 		<script>
 		(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
 		(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
@@ -41,13 +41,13 @@
 			<h2>Distance &amp; Time to Minutes/<span class="units_label">mile</span></h2>
 			<h3>I ran so far in such an amount of time. How fast did I go?</h3>
 
-			<div class="inputGroup">
+			<div class="input_group">
 				<table>
 					<tr>
-						<th>Distance (<span class="units_label">mile</span>)</th>
-						<th>Hours</th>
-						<th>Minutes</th>
-						<th>Seconds</th>
+						<th class="result_label">Distance (<span class="units_label">mile</span>)</th>
+						<th class="result_label">Hours</th>
+						<th class="result_label">Minutes</th>
+						<th class="result_label">Seconds</th>
 					</tr>
 					<tr>
 	 					<td><input type="text" id="calc_mpm_dist" value="1" class="distance"></input></td>
@@ -62,7 +62,7 @@
 
 			<div class="clear"></div>
 
-			Result (per <span class="units_label">mile</span>): <span type="text" id="calc_mpm_result" class="time result"></span>
+			<span class="result_label">Result (per <span class="units_label">mile</span>):</span> <span type="text" id="calc_mpm_result" class="time result"></span>
 		</div>
 
 		<hr/>
@@ -72,7 +72,7 @@
 			<h3>If I ran at a certain speed when would I finish a given distance?</h3>
 
 			<div>
-				<div class="inputGroup">
+				<div class="input_group">
 					<table>
 						<tr>
 							<th>Distance (<span class="units_label">mile</span>, optional)</th>
@@ -85,7 +85,7 @@
 
 				<div class="clear"></div>
 
-				<div class="inputGroup">
+				<div class="input_group">
 					<table>
 						<tr>
 							<th>Minutes</th>
@@ -102,7 +102,7 @@
 				<div style="float: left;">
 					or  
 				</div>
-				<div class="inputGroup">
+				<div class="input_group">
 					<table>
 						<tr>
 							<th><span class="units_label">mile</span>/h</th>
@@ -136,7 +136,7 @@
 			<h2><span class="units_label">mile</span>s per hour to Minutes per <span class="units_label">mile</span></h2>
 			<h3>I'd like to convert Minutes/<span class="units_label">mile</span> to <span class="units_label">mile</span>s per hour, or vice versa.</h3>
 
-			<div class="inputGroup">
+			<div class="input_group">
 				<table>
 					<tr>
 						<th><span class="units_label">mile</span>/h</th>
@@ -146,11 +146,11 @@
 					</tr>
 				</table>	
 			</div>
-			<div class="inputGroup">
+			<div class="input_group">
 				<button id="calc_utom_uph_to_mpm">&gt;</button><br/>
 				<button id="calc_utom_mpm_to_uph">&lt;</button>
 			</div>
-			<div class="inputGroup">
+			<div class="input_group">
 				<table>
 					<tr>
 						<th>Minutes</th>

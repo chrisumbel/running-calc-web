@@ -65,7 +65,7 @@ function parseAndValidateNumberField(fieldSelector) {
     var n = parseNumber($(fieldSelector).val());
 
     if(!isValid(n)) {
-        $(fieldSelector).addClass('inputError');
+        $(fieldSelector).addClass('input_error');
 
         throw 'invalid input';
     }
@@ -75,7 +75,7 @@ function parseAndValidateNumberField(fieldSelector) {
 
 function errorIfy(callback, err) {
     try {        
-        $('input').removeClass('inputError');
+        $('input').removeClass('input_error');
         callback();
     } catch (e) {
         if(err) {

@@ -140,7 +140,7 @@ $('#calc_utom_uph_to_mpm').click(function() {
 $('#calc_utom_mpm_to_uph').click(function() {
     errorIfy(function() {
         var ups = spuToUps(timePartsToSeconds(0, parseAndValidateNumberField('#calc_utom_mm'), parseAndValidateNumberField('#calc_utom_ss')));
-        $('#calc_utom_uph').val(ups * 60 * 60);
+        $('#calc_utom_uph').val(formateDecimal(ups * 60 * 60));
     }, function() {
         $('#calc_utom_uph').val(0);        
     });

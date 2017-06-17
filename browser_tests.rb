@@ -5,7 +5,7 @@ include RSpec::Expectations
 
 describe "MmValue" do
   before(:each) do
-    @driver = Selenium::WebDriver.for :phantomjs
+    @driver = Selenium::WebDriver.for :firefox
     @base_url = "file:///#{Dir.pwd}/"
     @accept_next_alert = true
     @driver.manage.timeouts.implicit_wait = 30

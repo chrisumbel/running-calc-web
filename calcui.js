@@ -99,7 +99,7 @@ $('#calc_mpm_calc').click(function() {
         var hh = parseAndValidateNumberField($('#calc_mpm_hh'));
         var mm = parseAndValidateNumberField($('#calc_mpm_mm')); 
         var ss = parseAndValidateNumberField($('#calc_mpm_ss'));
-        var time = calcMilesPerMinute(dist, hh, mm, ss);
+        var time = calcDistancePerMinute(dist, hh, mm, ss);
 
         $('#calc_mpm_result').text(time);    
     }, function() {

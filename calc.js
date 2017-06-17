@@ -20,7 +20,7 @@ function timePartsToSeconds(hh, mm, ss) {
     return (hh * 60 * 60) + (mm * 60) + ss;
 }
 
-function calcMilesPerMinute(dist, hh, mm, ss) {	
+function calcDistancePerMinute(dist, hh, mm, ss) {	
     return secondsPerDistanceToTime(dist, timePartsToSeconds(hh, mm, ss));
 }
 
@@ -48,7 +48,7 @@ exports.pad = pad;
 exports.secondsToTime = secondsToTime;
 exports.secondsPerDistanceToTime = secondsPerDistanceToTime;
 exports.timePartsToSeconds = timePartsToSeconds;
-exports.calcMilesPerMinute = calcMilesPerMinute;
+exports.calcDistancePerMinute = calcDistancePerMinute;
 exports.secondsForDistance = secondsForDistance;
 exports.timeForDistance = timeForDistance;
 exports.uphToUps = uphToUps;

@@ -5,7 +5,7 @@ include RSpec::Expectations
 
 describe "MmValue" do
   before(:each) do
-    @driver = Selenium::WebDriver.for :firefox
+    @driver = Selenium::WebDriver.for :phantomjs
     @base_url = "file:///#{Dir.pwd}/"
     @accept_next_alert = true
     @driver.manage.timeouts.implicit_wait = 30
@@ -20,7 +20,7 @@ describe "MmValue" do
   it "test_mm_value" do
     @driver.get(@base_url + "index.html")
     @driver.find_element(:id, "calc_utom_uph").clear
-    @driver.find_element(:id, "calc_utom_uph").send_keys "10"
+    @driver.find_element(:id, "calc_utom_uph").send_keys("10")
     @driver.find_element(:id, "calc_utom_uph_to_mpm").click
     verify { (@driver.find_element(:id, "calc_utom_mm").attribute("value")).should == "6" }
   end

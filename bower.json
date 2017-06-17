@@ -1,0 +1,11 @@
+{
+  "name": "running-calc-web",
+  "authors": [
+    "Chris Umbel <chris@chrisumbel.com>"
+  ],
+  "description": "library of handy calculations for runners",
+  "license": "MIT",
+  "dependencies": {
+    "running-calc": "~0.0.4"
+  }
+}

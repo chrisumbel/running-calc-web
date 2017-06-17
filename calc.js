@@ -32,10 +32,6 @@ function timeForDistance(dist, spu) {
     return secondsToTime(secondsForDistance(dist, spu));
 }
 
-function uphToSpu(uph) {
-    return upsToSpu(uphToUps(uph));
-}
-
 function uphToUps(uph) {
     return uph / 60.0 / 60.0;
 }
@@ -46,6 +42,10 @@ function upsToSpu(ups) {
 
 function spuToUps(spu) {
     return  1 / spu;
+}
+
+function uphToSpu(uph) {
+    return upsToSpu(uphToUps(uph));
 }
 
 exports.pad = pad;
@@ -59,4 +59,3 @@ exports.uphToSpu = uphToSpu;
 exports.uphToUps = uphToUps;
 exports.upsToSpu = upsToSpu;
 exports.spuToUps = spuToUps;
-

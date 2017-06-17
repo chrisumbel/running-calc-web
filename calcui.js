@@ -109,8 +109,8 @@ $('#calc_mpm_calc').click(function() {
 
 $('#calc_dist_calc_uph').click(function() {
     errorIfy(function() {
-        var ups = parseAndValidateNumberField('#calc_dist_uph');
-        var spu = upsToSpu(uphToUps(ups));
+        var uph = parseAndValidateNumberField('#calc_dist_uph');
+        var spu = uphToSpu(uph);
         calcDistanceTimes(spu);
     }, function() {
         $('#calc_dist_results').html('');
@@ -136,7 +136,7 @@ function formateDecimal(n) {
 
 $('#calc_utom_uph_to_mpm').click(function() {
     errorIfy(function() {
-        var spu = upsToSpu(uphToUps(parseAndValidateNumberField('#calc_utom_uph')));
+        var spu = uphToSpu(parseAndValidateNumberField('#calc_utom_uph'));
         $('#calc_utom_mm').val(Math.floor(spu / 60));
         $('#calc_utom_ss').val(formateDecimal(spu % 60));
     }, function() {

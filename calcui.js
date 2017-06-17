@@ -1,24 +1,3 @@
-var distances = {
-    '1 mile': 1,
-    '5K': 3.10686,
-    '8K': 4.97097,
-    '10K': 6.21371,
-    '15K': 9.32057,
-    '10 mile': 10,
-    'Half Marathon': 13.1094,
-    'Marathon': 26.2188,
-    '50K': 31.0686,
-    '50 mile': 50,
-    '100K': 62.1371,
-    '100 mile': 100
-};
-
-function pad(s, n) {
-    if(s.length < n)
-        return '0' + s;
-
-    return s;
-}
 
 function getDistanceMode() {
     return $('input:radio[name=calc_units]:checked').val();
@@ -28,24 +7,29 @@ $('input:radio[name=calc_units]').click(function() {
     $('.units_label').text(getDistanceMode());
 });
 
+function isValid(n) {
+    valid = isFinite(n) && n >= 0; 
+    return valid;
+}
+
 function calcDistanceTimes(spu) {
     if(isValid(spu)) {
         $('#calc_dist_results').html('');
         var scale = 1;
 
         if(getDistanceMode() == 'km') {
-            scale = 1.60934;
+            scale = 1.609344;
         }
 
-        var times = times = calcTimes(spu, scale);
+        var times = calcTimes(spu, scale);
         var customDist = parseNumber($('#calc_dist_dist').val());
 
         if(customDist > 0 && isValid(customDist)) {
-            $('#calc_dist_results').html('<tr class="custom_dist"><td>' + customDist + ' ' + getDistanceMode() + '</td><td>' + timeForDistance(customDist, spu) + '</td></tr>');
+            $('#calc_dist_results').html('<tr class="custom_dist"><td>' + customDist + ' ' + getDistanceMode() + '</td><td id="calc_custom_dist">' + timeForDistance(customDist, spu) + '</td></tr>');
         }
 
         for(distName in distances) {
-            $('#calc_dist_results').append('<tr><td>' + distName + '</td><td>' + times[distName] + '</td></tr>');
+            $('#calc_dist_results').append('<tr><td>' + distName + '</td><td id="calc_dist_results_' + distName.replace(' ', '_') + '">' + times[distName] + '</td></tr>');
         }
     } else {
         $('#calc_dist_results').html('');

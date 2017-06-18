@@ -15,7 +15,7 @@ node("docker") {
         
         node.inside() {
             sh 'npm install -g bower'
-            sh 'bower install running-calc';
+            sh 'bower install';
         }
     }
 

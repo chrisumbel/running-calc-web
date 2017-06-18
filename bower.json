@@ -7,6 +7,6 @@
   "license": "MIT",
   "dependencies": {
     "running-calc": "~0.0.4",
-    "running-calc-web-ui": "~0.0.1"
+    "running-calc-web-ui": "~0.0.2"
   }
 }
